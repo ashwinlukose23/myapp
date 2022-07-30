@@ -3,21 +3,6 @@ import ReactLoading from "react-loading";
 import styled from "styled-components";
 import "./App.css";
 
-const Button = styled.button`
-  background-color: #3f51b5;
-  color: white;
-  padding: 5px 15px;
-  margin: 20px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  box-shadow: 1px 2px 2px lightgray;
-  cursor: pointer;
-  transition: ease background-color 500ms;
-  &:hover {
-    background-color: #28359;
-  }
-`;
-
 class App extends React.Component {
   // Constructor
   constructor(props) {
@@ -59,11 +44,23 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Button onClick={() => this.onClickMe()}>Button</Button>
+        <button className="button" onClick={() => this.onClickMe()}>
+          Button
+        </button>
         {items.map((item) => (
-          <div>
+          <div className="details">
             <ol key={item.id}>
-              First Name: {item.first_name}, Last Name: {item.last_name}, User Email:{item.email} ,
+              <div className="details1">
+              <div>
+              First Name: {item.first_name}, 
+              </div>
+              <div>
+              Last Name: {item.last_name}, 
+              </div>
+              <div>
+              Email: {item.email}, 
+              </div>
+              </div>
             </ol>
             <img src={item.avatar} alt="new" />
           </div>
