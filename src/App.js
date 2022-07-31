@@ -1,6 +1,5 @@
 import React from "react";
 import ReactLoading from "react-loading";
-import styled from "styled-components";
 import "./App.css";
 
 class App extends React.Component {
@@ -45,7 +44,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <button className="button" onClick={() => this.onClickMe()}>
-          Button
+          Get Users
         </button>
         {items.map((item) => (
           <div className="details">
